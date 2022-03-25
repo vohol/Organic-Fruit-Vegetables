@@ -4,10 +4,12 @@
 $color-main-green: #09a66d;
 $color-light-green: #f3fbf8;
 $color-black: #222222;
+$color-pale-black: #555555;
 
 * {
   box-sizing: border-box;
   color: $color-black;
+  font-family: "DM Sans", sans-serif;
 }
 .container {
   max-width: 1240px;
@@ -22,6 +24,27 @@ $color-black: #222222;
   }
 }
 
+.logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+  padding: 13.79px 13.74px 5.35px 5.47px;
+
+  position: relative;
+  &__leaf {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.6s;
+    transform-origin: 23.5px 32px;
+  }
+  &:hover &__leaf {
+    transform: rotate(-0.25turn);
+  }
+  &.active &__leaf {
+    transform: rotate(-1turn);
+  }
+}
 .header {
   .container {
     padding: 20px;
@@ -30,26 +53,17 @@ $color-black: #222222;
     align-items: center;
     justify-content: space-between;
   }
-  &__logo {
-    transition: all 0.5s;
-    & path {
-    }
-    &:hover {
-      transform: rotate(-0.25turn);
-    }
-    &.active {
-      transform: rotate(-0.25turn);
-    }
-  }
   &__navigation {
     display: flex;
     flex-direction: column;
     position: fixed;
     padding-top: 60px;
     max-width: 220px;
-    top: 99px;
+    top: 96px;
     width: 100%;
+    height: 100vh;
     right: -100%;
+    background-color: #ffffff;
     transition: right 0.2s;
     &.active {
       right: 0;
@@ -92,7 +106,6 @@ $color-black: #222222;
     padding: 8px 10px;
     border-radius: 8px;
     background-color: #09a66d;
-    font-family: "DM Sans";
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -170,6 +183,7 @@ $color-black: #222222;
 @media screen and (min-width: 846px) {
   .header {
     &__navigation {
+      height: auto;
       position: unset;
       flex-direction: row;
       padding: 0;
@@ -191,6 +205,235 @@ $color-black: #222222;
       &:not(:last-child) {
         margin-right: 40px;
       }
+    }
+  }
+}
+
+.hero {
+  background-color: $color-light-green;
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    text-align: center;
+    font-family: "Rosario", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 129%;
+    margin-bottom: 20px;
+  }
+  &__description {
+    display: block;
+    max-width: 637px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 167%;
+    color: $color-pale-black;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  // &__image {
+  //   max-width: 862px;
+  //   width: 100%;
+  // }
+  &__photo-and-reviews {
+    display: flex;
+    flex-direction: column;
+  }
+  &__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__review-item {
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 2px 0 5px 0.1px rgba(9, 166, 109, 0.3);
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-light-green;
+    margin-right: 24px;
+  }
+  &__counter-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__counter {
+    text-align: center;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 100%;
+  }
+  &__counter-description {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 167%;
+    padding-top: 4px;
+  }
+  &__image-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__image {
+    max-width: 862px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 446px) {
+  .hero {
+    &__photo-and-reviews {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    &__image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    &__reviews {
+      z-index: 1;
+      align-items: flex-end;
+      padding-right: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 846px) {
+  .hero {
+    .container {
+      padding-top: 92px;
+    }
+    &__title {
+      font-size: 70px;
+    }
+
+    &__photo-and-reviews {
+      position: relative;
+      flex-direction: row;
+    }
+    &__image-wrapper {
+      margin-bottom: 0;
+      top: unset;
+      left: 20px;
+      bottom: -17px;
+    }
+    &__reviews {
+      align-items: flex-end;
+    }
+
+    &__review-item {
+      max-width: 250px;
+      padding: 17px 33px;
+    }
+    &__counter {
+      font-size: 48px;
+    }
+    &__description {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    &__photo-and-reviews {
+      padding-right: 0;
+    }
+  }
+}
+
+.order-now {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  &:hover &__arrow-wrapper {
+    animation: move-arrow-wrapper 1.25s infinite;
+  }
+  &:hover &__arrow {
+    animation: move-arrow 1.25s infinite;
+  }
+  &__span {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 167%;
+    margin-right: 20px;
+  }
+  &__arrow-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: $color-main-green;
+  }
+  &__arrow {
+    width: 26.4px;
+    height: 12.8px;
+  }
+}
+
+@keyframes move-arrow-wrapper {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(20px);
+  }
+}
+@keyframes move-arrow {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(10px);
+  }
+}
+
+@media screen and (min-width: 846px) {
+  .order-now {
+    margin-bottom: 0;
+
+    &__span {
+      font-size: 16px;
+    }
+    &__arrow-wrapper {
+      width: 64px;
+      height: 64px;
+    }
+    &__arrow {
+      width: 33px;
+      height: 16px;
     }
   }
 }
