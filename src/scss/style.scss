@@ -32,7 +32,8 @@ $color-black: #222222;
   }
   &__logo {
     transition: all 0.5s;
-    transform: translate(-50%, -50%);
+    & path {
+    }
     &:hover {
       transform: rotate(-0.25turn);
     }
@@ -98,7 +99,7 @@ $color-black: #222222;
     transition: all 0.3;
     color: #ffffff;
     right: -100%;
-    transition: all 0.3s;
+    transition: all 0.2s;
 
     &.mobile {
       right: 59px;

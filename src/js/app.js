@@ -17,4 +17,16 @@ function openMobileMenu (event) {
     headerLogo.classList.toggle('active')
     headerRegBtn.classList.toggle('mobile')
   }
+  if (target.closest('.header__navigation') || target.closest('.header__reg-btn')) {
+    headerBurger.classList.remove('active')
+    headerNavigation.classList.remove('active')
+    headerLogo.classList.remove('active')
+    headerRegBtn.classList.remove('mobile')
+  }
+  if (!target.closest('.header__navigation') && !target.closest('.header__burger-wrapper')) {
+    headerBurger.classList.remove('active')
+    headerNavigation.classList.remove('active')
+    headerLogo.classList.remove('active')
+    headerRegBtn.classList.remove('mobile')
+  }
 }
