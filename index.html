@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosario:wght@700&display=swap" rel="stylesheet"> 
+	
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>Organic Fruit & Vegetables</title>
 </head>
@@ -16,10 +21,13 @@
       <a href="#" class="header__navigation-element">Menu</a>
       <a href="#" class="header__navigation-element">Contact</a>
     </nav>
-    <a href="#">
+    <a class="header__logo logo"href="#">
 
-      <svg class="svg-planet-earth-dims header__logo">
-        <use xlink:href="img/icons/icons.svg#planet-earth"></use>
+      <svg class="svg-earth-dims logo__earth">
+        <use xlink:href="img/icons/icons.svg#earth"></use>
+      </svg>
+      <svg class="svg-leaf-dims logo__leaf">
+        <use xlink:href="img/icons/icons.svg#leaf"></use>
       </svg>
     </a>
     <div class="header__buttons">
@@ -43,8 +51,71 @@
   </div>
 </header>
 		<main>
+			<section class="hero">
+				<div class="container">
+					
+					<div class="hero__title-wrapper">
+						<h1 class="hero__title">Organic Fruit & Vegetables</h1>
+						<p class="hero__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
+					</div>
+					
+					<button class="order-now">
+						<span class="order-now__span">Order Now</span>
+						<div class="order-now__arrow-wrapper">
+							<img src="img/icons/icons.svg#long-arrow" class="svg-long-arrow-dims order-now__arrow" alt="long-arrow"/>
+						</div>
+					</button>
+
+					<div class="hero__photo-and-reviews">
+							<div class="hero__image-wrapper">
+								<img class="hero__image" src="img/vegetables-fruits-white.png" alt="vegetables and fruits">
+							</div>
+							<div class="hero__reviews">
+								<div class="hero__review-item">
+									<div class="hero__icon-wrapper">
+										<img class="svg-user-dims hero__icon"src="img/icons/icons.svg#user" class="svg-user-dims" alt="user"/>
+									</div>
+									<div class="hero__counter-wrapper">
+										<div class="hero__counter">
+											<span class="hero__counter-item">30</span>K
+											<div class="hero__counter-description">User Order</div>
+										</div>
+									</div>
+								</div>
+								<div class="hero__review-item">
+									<div class="hero__icon-wrapper">
+										<img src="img/icons/icons.svg#star-weird" class="svg-star-weird-dims hero__icon" alt="star-weird"/>
+									</div>
+									<div class="hero__counter-wrapper">
+										<div class="hero__counter">
+											<span class="hero__counter-item">20</span>K
+											<div class="hero__counter-description">Reviews(4.8)</div>
+										</div>
+									</div>
+								</div>
+								<div class="hero__review-item">
+									<div class="hero__icon-wrapper">
+										<img src="img/icons/icons.svg#harvest" class="svg-harvest-dims hero__icon" alt="harvest"/>
+									</div>
+									<div class="hero__counter-wrapper">
+										<div class="hero__counter">
+											<span class="hero__counter-item">300</span>
+											<div class="hero__counter-description">Items</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						<!-- </div> -->
+					</div>
+
+
+				</div>
+			</section>
 		</main>
 		<footer></footer>
 		<script src="js/app.min.js"></script>
 	</body>
 </html>
+
+

@@ -89,6 +89,11 @@ h1, h2, h3, h4, h5, h6 {
   height: 41px;
 }
 
+.svg-earth-dims {
+  width: 36.76px;
+  height: 36.86px;
+}
+
 .svg-facebook-dims {
   width: 25px;
   height: 25px;
@@ -119,13 +124,18 @@ h1, h2, h3, h4, h5, h6 {
   height: 25px;
 }
 
+.svg-leaf-dims {
+  width: 55.97px;
+  height: 56px;
+}
+
 .svg-long-arrow-dims {
   width: 33px;
   height: 16px;
 }
 
 .svg-planet-earth-dims {
-  width: 56px;
+  width: 57px;
   height: 56px;
 }
 
@@ -167,6 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 * {
   box-sizing: border-box;
   color: #222222;
+  font-family: "DM Sans", sans-serif;
 }
 
 .container {
@@ -181,20 +192,32 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
   }
 }
+.logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+  padding: 13.79px 13.74px 5.35px 5.47px;
+  position: relative;
+}
+.logo__leaf {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.6s;
+  transform-origin: 23.5px 32px;
+}
+.logo:hover .logo__leaf {
+  transform: rotate(-0.25turn);
+}
+.logo.active .logo__leaf {
+  transform: rotate(-1turn);
+}
+
 .header .container {
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.header__logo {
-  transition: all 0.5s;
-}
-.header__logo:hover {
-  transform: rotate(-0.25turn);
-}
-.header__logo.active {
-  transform: rotate(-0.25turn);
 }
 .header__navigation {
   display: flex;
@@ -202,9 +225,11 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   padding-top: 60px;
   max-width: 220px;
-  top: 99px;
+  top: 96px;
   width: 100%;
+  height: 100vh;
   right: -100%;
+  background-color: #ffffff;
   transition: right 0.2s;
 }
 .header__navigation.active {
@@ -247,7 +272,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 8px 10px;
   border-radius: 8px;
   background-color: #09a66d;
-  font-family: "DM Sans";
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -313,6 +337,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (min-width: 846px) {
   .header__navigation {
+    height: auto;
     position: unset;
     flex-direction: row;
     padding: 0;
@@ -334,5 +359,217 @@ h1, h2, h3, h4, h5, h6 {
   }
   .header__navigation-element:not(:last-child) {
     margin-right: 40px;
+  }
+}
+.hero {
+  background-color: #f3fbf8;
+}
+.hero .container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.hero__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__title {
+  text-align: center;
+  font-family: "Rosario", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 129%;
+  margin-bottom: 20px;
+}
+.hero__description {
+  display: block;
+  max-width: 637px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 167%;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.hero__photo-and-reviews {
+  display: flex;
+  flex-direction: column;
+}
+.hero__reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__review-item {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 2px 0 5px 0.1px rgba(9, 166, 109, 0.3);
+}
+.hero__review-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.hero__icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3fbf8;
+  margin-right: 24px;
+}
+.hero__counter-wrapper {
+  display: flex;
+  align-items: center;
+}
+.hero__counter {
+  text-align: center;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 100%;
+}
+.hero__counter-description {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 167%;
+  padding-top: 4px;
+}
+.hero__image-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+.hero__image {
+  max-width: 862px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 446px) {
+  .hero__photo-and-reviews {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .hero__image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .hero__reviews {
+    z-index: 1;
+    align-items: flex-end;
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 846px) {
+  .hero .container {
+    padding-top: 92px;
+  }
+  .hero__title {
+    font-size: 70px;
+  }
+  .hero__photo-and-reviews {
+    position: relative;
+    flex-direction: row;
+  }
+  .hero__image-wrapper {
+    margin-bottom: 0;
+    top: unset;
+    left: 20px;
+    bottom: -17px;
+  }
+  .hero__reviews {
+    align-items: flex-end;
+  }
+  .hero__review-item {
+    max-width: 250px;
+    padding: 17px 33px;
+  }
+  .hero__counter {
+    font-size: 48px;
+  }
+  .hero__description {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__photo-and-reviews {
+    padding-right: 0;
+  }
+}
+.order-now {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+.order-now:hover .order-now__arrow-wrapper {
+  animation: move-arrow-wrapper 1.25s infinite;
+}
+.order-now:hover .order-now__arrow {
+  animation: move-arrow 1.25s infinite;
+}
+.order-now__span {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 167%;
+  margin-right: 20px;
+}
+.order-now__arrow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #09a66d;
+}
+.order-now__arrow {
+  width: 26.4px;
+  height: 12.8px;
+}
+
+@keyframes move-arrow-wrapper {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(20px);
+  }
+}
+@keyframes move-arrow {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(10px);
+  }
+}
+@media screen and (min-width: 846px) {
+  .order-now {
+    margin-bottom: 0;
+  }
+  .order-now__span {
+    font-size: 16px;
+  }
+  .order-now__arrow-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+  .order-now__arrow {
+    width: 33px;
+    height: 16px;
   }
 }
