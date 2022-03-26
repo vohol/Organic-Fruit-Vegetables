@@ -331,11 +331,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 1280px) {
   .header .container {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 50px 0 43px;
   }
 }
 @media screen and (min-width: 846px) {
+  .header .container {
+    padding: 50px 20px 43px;
+  }
   .header__navigation {
     height: auto;
     position: unset;
@@ -368,10 +370,24 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.hero #scene {
+  position: absolute;
+  z-index: 2;
+  top: 112px;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.hero__parallax-img {
+  width: 100%;
+}
 .hero__title-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .hero__title {
   text-align: center;
@@ -403,15 +419,18 @@ h1, h2, h3, h4, h5, h6 {
 .hero__review-item {
   display: flex;
   align-items: center;
-  max-width: 200px;
-  width: 100%;
-  padding: 8px 16px;
+  padding: 10px 16px;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 2px 0 5px 0.1px rgba(9, 166, 109, 0.3);
+  opacity: 0;
+  transition: all 1.5s;
 }
 .hero__review-item:not(:last-child) {
   margin-bottom: 30px;
+}
+.hero__review-item.not-opacity {
+  opacity: 1;
 }
 .hero__icon-wrapper {
   width: 56px;
@@ -426,12 +445,14 @@ h1, h2, h3, h4, h5, h6 {
 .hero__counter-wrapper {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 .hero__counter {
   text-align: center;
   font-weight: 400;
   font-size: 38px;
   line-height: 100%;
+  min-width: 95px;
 }
 .hero__counter-description {
   text-align: center;
@@ -464,7 +485,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 0;
   }
   .hero__reviews {
-    z-index: 1;
+    z-index: 2;
     align-items: flex-end;
     padding-right: 20px;
   }
@@ -511,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   background: transparent;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   margin-bottom: 10px;
 }
 .order-now:hover .order-now__arrow-wrapper {

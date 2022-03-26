@@ -174,14 +174,16 @@ $color-pale-black: #555555;
 @media screen and (min-width: 1280px) {
   .header {
     .container {
-      padding-right: 0;
-      padding-left: 0;
+      padding: 50px 0 43px;
     }
   }
 }
 
 @media screen and (min-width: 846px) {
   .header {
+    .container {
+      padding: 50px 20px 43px;
+    }
     &__navigation {
       height: auto;
       position: unset;
@@ -215,10 +217,24 @@ $color-pale-black: #555555;
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  #scene {
+    position: absolute;
+    z-index: 2;
+    top: 112px;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  &__parallax-img {
+    width: 100%;
+  }
   &__title-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
   }
   &__title {
     text-align: center;
@@ -254,14 +270,18 @@ $color-pale-black: #555555;
   &__review-item {
     display: flex;
     align-items: center;
-    max-width: 200px;
-    width: 100%;
-    padding: 8px 16px;
+    padding: 10px 16px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 2px 0 5px 0.1px rgba(9, 166, 109, 0.3);
+    opacity: 0;
+    transition: all 1.5s;
+
     &:not(:last-child) {
       margin-bottom: 30px;
+    }
+    &.not-opacity {
+      opacity: 1;
     }
   }
   &__icon-wrapper {
@@ -277,12 +297,14 @@ $color-pale-black: #555555;
   &__counter-wrapper {
     display: flex;
     align-items: center;
+    flex-direction: column;
   }
   &__counter {
     text-align: center;
     font-weight: 400;
     font-size: 38px;
     line-height: 100%;
+    min-width: 95px;
   }
   &__counter-description {
     text-align: center;
@@ -316,7 +338,7 @@ $color-pale-black: #555555;
       z-index: 0;
     }
     &__reviews {
-      z-index: 1;
+      z-index: 2;
       align-items: flex-end;
       padding-right: 20px;
     }
@@ -373,7 +395,7 @@ $color-pale-black: #555555;
   align-items: center;
   background: transparent;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   margin-bottom: 10px;
   &:hover &__arrow-wrapper {
     animation: move-arrow-wrapper 1.25s infinite;

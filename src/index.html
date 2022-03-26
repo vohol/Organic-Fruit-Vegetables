@@ -8,7 +8,13 @@
 		<main>
 			<section class="hero">
 				<div class="container">
-					
+					<div id="scene">
+	
+						<div data-depth="0.2" class="layer">
+							<img  class="hero__paralax-img" src="@img/fresh-melientha-suavis-pierre-leaves-white-surface_removebg-preview.png" alt="">
+							
+						</div>
+					</div>
 					<div class="hero__title-wrapper">
 						<h1 class="hero__title">Organic Fruit & Vegetables</h1>
 						<p class="hero__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
@@ -20,8 +26,8 @@
 							<img src="@img/icons/icons.svg#long-arrow" class="svg-long-arrow-dims order-now__arrow" alt="long-arrow"/>
 						</div>
 					</button>
-
-					<div class="hero__photo-and-reviews">
+					
+					<div  class="hero__photo-and-reviews">
 							<div class="hero__image-wrapper">
 								<img class="hero__image" src="@img/vegetables-fruits-white.png" alt="vegetables and fruits">
 							</div>
@@ -32,9 +38,9 @@
 									</div>
 									<div class="hero__counter-wrapper">
 										<div class="hero__counter">
-											<span class="hero__counter-item">30</span>K
-											<div class="hero__counter-description">User Order</div>
+											<span class="hero__counter-item order-user">30</span>K
 										</div>
+										<div class="hero__counter-description">User Order</div>
 									</div>
 								</div>
 								<div class="hero__review-item">
@@ -43,9 +49,9 @@
 									</div>
 									<div class="hero__counter-wrapper">
 										<div class="hero__counter">
-											<span class="hero__counter-item">20</span>K
-											<div class="hero__counter-description">Reviews(4.8)</div>
+											<span class="hero__counter-item reviews">20</span>K
 										</div>
+										<div class="hero__counter-description">Reviews(4.8)</div>
 									</div>
 								</div>
 								<div class="hero__review-item">
@@ -54,9 +60,9 @@
 									</div>
 									<div class="hero__counter-wrapper">
 										<div class="hero__counter">
-											<span class="hero__counter-item">300</span>
-											<div class="hero__counter-description">Items</div>
+											<span class="hero__counter-item items">300</span>
 										</div>
+										<div class="hero__counter-description">Items</div>
 									</div>
 								</div>
 
@@ -69,6 +75,7 @@
 			</section>
 		</main>
 		@@include('html/footer.html',{})
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 		<script src="js/app.min.js"></script>
 	</body>
 </html>
