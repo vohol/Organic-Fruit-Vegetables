@@ -9,6 +9,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Rosario:wght@700&display=swap" rel="stylesheet"> 
 	
+	<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>Organic Fruit & Vegetables</title>
 </head>
@@ -61,14 +65,18 @@
 						</div>
 					</div>
 					<div class="hero__title-wrapper">
-						<h1 class="hero__title">Organic Fruit & Vegetables</h1>
-						<p class="hero__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
+						<h1 class="hero__title section-title">Organic Fruit & Vegetables</h1>
+						<p class="hero__description section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
 					</div>
 					
 					<button class="order-now">
 						<span class="order-now__span">Order Now</span>
 						<div class="order-now__arrow-wrapper">
-							<img src="img/icons/icons.svg#long-arrow" class="svg-long-arrow-dims order-now__arrow" alt="long-arrow"/>
+
+							<svg class="svg-long-arrow-dims order-now__arrow">
+								<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#long-arrow"></use>
+							</svg>
+							<!-- <img src="img/icons/icons.svg#long-arrow" class="svg-long-arrow-dims order-now__arrow" alt="long-arrow"/> -->
 						</div>
 					</button>
 					
@@ -118,8 +126,63 @@
 
 				</div>
 			</section>
+			<section class="service">
+				<div class="container">
+					<div class="service__content">
+						<h2 class="service__title section-title" >Why We Are The Best?</h2>
+						<p class="service__description section-description" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
+
+						<div class="swiper service__swiper ">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="swiper-slide__icon-wrapper">
+										<img src="img/icons/icons.svg#delivery-man" class="svg-delivery-man-dims" alt="delivery-man"/>
+									</div>
+									<div class="swiper-slide__text-content">
+										<div class="swiper-slide__title">Fasted delivery Service</div>
+										<div class="swiper-slide__discription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide__icon-wrapper">
+										<img src="img/icons/icons.svg#shopping-list" class="svg-shopping-list-dims" alt="shopping-list"/>
+									</div>
+									<div class="swiper-slide__text-content">
+										<div class="swiper-slide__title">Online order Service</div>
+										<div class="swiper-slide__discription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide__icon-wrapper">
+										<img src="img/icons/icons.svg#fast-time" class="svg-fast-time-dims" alt="fast-time"/>
+									</div>
+									<div class="swiper-slide__text-content">
+										<div class="swiper-slide__title">24/8 Service</div>
+										<div class="swiper-slide__discription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+									</div>
+								</div>
+
+							</div>
+							
+						</div>
+
+						<div class="swiper-button-next-my">
+							<svg class=" svg-long-arrow-dims  arrow-icon">
+								<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#long-arrow"></use>
+							</svg>
+					</div>
+
+					</div>
+
+					<div class="service__image-block image-with-courier">
+						<div class="image-with-courier__green-elipse"></div>
+						<img class = "image-with-courier__green-snake" src="img/snake-elipse.png" alt="">
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer></footer>
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 		<script src="js/app.min.js"></script>
 	</body>
