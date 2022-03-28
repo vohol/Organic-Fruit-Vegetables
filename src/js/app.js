@@ -1,6 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 
+
 const scene = document.getElementById('scene');
 const parallax = new Parallax(scene);
 
@@ -86,3 +87,17 @@ function counter(element, max, interval=100) {
     }
   }, interval)
 }
+
+
+const swiper = new Swiper('.swiper', {
+  direction: "vertical",
+  grabCursor: "true",
+  centeredSlides: "true",
+  loop: "true",
+  rewind: "true",
+  slidesPerView: 3,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.swiper-button-next-my',
+  },
+});
