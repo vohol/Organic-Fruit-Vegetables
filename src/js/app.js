@@ -1,9 +1,14 @@
 import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
+AOS.init();
 
 
 const scene = document.getElementById('scene');
+const scene2 = document.getElementById('scene2');
+const scene3 = document.getElementById('scene3');
 const parallax = new Parallax(scene);
+const parallax2 = new Parallax(scene2);
+const parallax3 = new Parallax(scene3);
 
 const headerBurger = document.querySelector('.header__burger')
 const headerNavigation = document.querySelector('.header__navigation')
@@ -95,9 +100,20 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: "true",
   loop: "true",
   rewind: "true",
+  mousewheel: true,
   slidesPerView: 3,
   spaceBetween: 20,
   navigation: {
     nextEl: '.swiper-button-next-my',
+  },
+});
+const swiperReviews = new Swiper('.swiper-reviews', {
+  loop: true,
+  //rewind: true,
+  spaceBetween: 30,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.swiper-button-custom--next',
+    prevEl: '.swiper-button-custom--prev',
   },
 });

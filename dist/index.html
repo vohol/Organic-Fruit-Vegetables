@@ -12,7 +12,8 @@
 	<link
   rel="stylesheet"
   href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-/>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 	<link rel="stylesheet" href="css/style.min.css">
 	<title>Organic Fruit & Vegetables</title>
 </head>
@@ -58,28 +59,22 @@
 			<section class="hero">
 				<div class="container">
 					<div id="scene">
-	
-						<div data-depth="0.2" class="layer">
-							<img  class="hero__paralax-img" src="img/fresh-melientha-suavis-pierre-leaves-white-surface_removebg-preview.png" alt="">
-							
+						<div data-depth="0.12" class="layer">
+							<img class="hero__paralax-img" src="img/fresh-melientha-suavis-pierre-leaves-white-surface_removebg-preview.png" alt="">
 						</div>
 					</div>
 					<div class="hero__title-wrapper">
 						<h1 class="hero__title section-title">Organic Fruit & Vegetables</h1>
 						<p class="hero__description section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
 					</div>
-					
 					<button class="order-now">
 						<span class="order-now__span">Order Now</span>
 						<div class="order-now__arrow-wrapper">
-
 							<svg class="svg-long-arrow-dims order-now__arrow">
 								<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#long-arrow"></use>
 							</svg>
-							<!-- <img src="img/icons/icons.svg#long-arrow" class="svg-long-arrow-dims order-now__arrow" alt="long-arrow"/> -->
 						</div>
 					</button>
-					
 					<div  class="hero__photo-and-reviews">
 							<div class="hero__image-wrapper">
 								<img class="hero__image" src="img/vegetables-fruits-white.png" alt="vegetables and fruits">
@@ -118,12 +113,8 @@
 										<div class="hero__counter-description">Items</div>
 									</div>
 								</div>
-
 							</div>
-						<!-- </div> -->
 					</div>
-
-
 				</div>
 			</section>
 			<section class="service">
@@ -131,7 +122,6 @@
 					<div class="service__content">
 						<h2 class="service__title section-title" >Why We Are The Best?</h2>
 						<p class="service__description section-description" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley...</p>
-
 						<div class="swiper service__swiper ">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -161,27 +151,201 @@
 										<div class="swiper-slide__discription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
 									</div>
 								</div>
-
 							</div>
-							
 						</div>
-
 						<div class="swiper-button-next-my">
 							<svg class=" svg-long-arrow-dims  arrow-icon">
 								<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#long-arrow"></use>
 							</svg>
 					</div>
-
 					</div>
-
 					<div class="service__image-block image-with-courier">
 						<div class="image-with-courier__green-elipse"></div>
 						<img class = "image-with-courier__green-snake" src="img/snake-elipse.png" alt="">
 					</div>
 				</div>
 			</section>
+			<section class="special-items">
+				<div class="container">
+					<div class="special-items__photo-wrapper" id="scene3">
+						<div data-depth="0.3" class="layer">
+							<img class="special-items__cucumber special-items__rotated-photo" src="img/cucumber.png" alt="photo with cucumbers">
+						</div>
+						<div data-depth="0.24" class="layer">
+							<img class="special-items__oranges special-items__rotated-photo" src="img/oranges.png" alt="photo with oranges">
+						</div>
+						<div data-depth="0.18" class="layer">
+							<img class="special-items__apples special-items__rotated-photo" src="img/apples.png" alt="photo with apples">
+						</div>
+						<div data-depth="0.12" class="layer">
+							<img class="special-items__greens special-items__rotated-photo" src="img/green.png" alt="photo with greens">
+						</div>
+					</div>
+					<div class="special-items__content">
+						<h2 class="special-items__title section-title">Explore Our Special Items</h2>
+						<p class="special-items__description section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer...</p>
+
+						<button class="order-now">
+							<span class="order-now__span">Explore Now</span>
+							<div class="order-now__arrow-wrapper">
+								<svg class="svg-long-arrow-dims order-now__arrow">
+									<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#long-arrow"></use>
+								</svg>
+							</div>
+						</button>
+					</div>
+					<div id="scene2">
+						<div data-depth="0.12" class="layer">
+							<img  class="special-items__paralax-img" src="img/fresh-melientha-suavis-pierre-leaves-white-surface_removebg-preview.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="container">
+					<h2 class="reviews__title section-title">
+						What Our Customers About Us saying
+					</h2>
+					<div class="swiper-reviews">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="swiper-slide__photo">
+									<img class="swiper-slide__first-photo" src="img/bohemian-man-with-his-arms-crossed.png" alt="">
+									<img class="swiper-slide__second-photo"  src="img/likes.png" alt="">
+								</div>
+								<div class="swiper-slide__content">
+									<p class="swiper-slide__review section-description">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis
+									</p>
+									<div class="swiper-slide__reviewer"> Ahmed Hridoy</div>
+									<div class="swiper-slide__likes">
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-half-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#half-star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide__photo">
+									<img class="swiper-slide__first-photo" src="img/bohemian-man-with-his-arms-crossed.png" alt="">
+									<img class="swiper-slide__second-photo"  src="img/likes.png" alt="">
+								</div>
+								<div class="swiper-slide__content">
+									<p class="swiper-slide__review section-description">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis
+									</p>
+									<div class="swiper-slide__reviewer"> Ahmed Hridoy</div>
+									<div class="swiper-slide__likes">
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-half-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#half-star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide__photo">
+									<img class="swiper-slide__first-photo" src="img/bohemian-man-with-his-arms-crossed.png" alt="">
+									<img class="swiper-slide__second-photo"  src="img/likes.png" alt="">
+								</div>
+								<div class="swiper-slide__content">
+									<p class="swiper-slide__review section-description">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis
+									</p>
+									<div class="swiper-slide__reviewer"> Ahmed Hridoy</div>
+									<div class="swiper-slide__likes">
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-half-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#half-star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide__photo">
+									<img class="swiper-slide__first-photo" src="img/bohemian-man-with-his-arms-crossed.png" alt="">
+									<img class="swiper-slide__second-photo"  src="img/likes.png" alt="">
+								</div>
+								<div class="swiper-slide__content">
+									<p class="swiper-slide__review section-description">
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis
+									</p>
+									<div class="swiper-slide__reviewer"> Ahmed Hridoy</div>
+									<div class="swiper-slide__likes">
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#star"></use>
+										</svg>
+										<svg class="svg-half-star-dims swiper-slide__star-icon">
+											<use class="svg-long-arrow-dims"  xlink:href="img/icons/icons.svg#half-star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-button-wrapper">
+							<div class="swiper-button-custom swiper-button-custom--prev">
+								<svg class="svg-swiper-arrow-dims">
+									<use class="svg-swiper-arrow-dims"xlink:href="img/icons/icons.svg#swiper-arrow"></use>
+								</svg>
+							</div>
+							<div class="swiper-button-custom swiper-button-custom--next">
+								<svg class="svg-swiper-arrow-dims">
+									<use xlink:href="img/icons/icons.svg#swiper-arrow"></use>
+								</svg>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
 		</main>
 		<footer></footer>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 		<script src="js/app.min.js"></script>
