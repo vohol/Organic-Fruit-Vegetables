@@ -96,11 +96,10 @@ function counter(element, max, interval=100) {
 
 const swiper = new Swiper('.swiper', {
   direction: "vertical",
-  grabCursor: "true",
-  centeredSlides: "true",
-  loop: "true",
-  rewind: "true",
-  mousewheel: true,
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  rewind: true,
   slidesPerView: 3,
   spaceBetween: 20,
   navigation: {
