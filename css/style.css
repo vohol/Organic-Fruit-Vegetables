@@ -75,8 +75,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 .svg-app-store-dims {
-  width: 105px;
-  height: 31px;
+  width: 104px;
+  height: 30px;
 }
 
 .svg-busket-dims {
@@ -95,8 +95,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .svg-google-play-dims {
-  width: 105px;
-  height: 31px;
+  width: 104px;
+  height: 30px;
 }
 
 .svg-half-star-dims {
@@ -560,6 +560,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 .order-now:hover .order-now__arrow-wrapper {
   animation: move-arrow-wrapper 1.25s infinite;
@@ -1085,5 +1086,59 @@ h1, h2, h3, h4, h5, h6 {
   .reviews .swiper-button-wrapper {
     left: 30%;
     bottom: 90px;
+  }
+}
+.download-app .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 140px;
+}
+.download-app__iphones {
+  width: 265.08px;
+  margin-bottom: 30px;
+}
+.download-app__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.download-app__subtitle {
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 11px 24px;
+  border-radius: 50px;
+  background-color: #f3fbf8;
+  margin-bottom: 16px;
+}
+.download-app__title {
+  max-width: 663px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.download-app__description {
+  max-width: 574px;
+  margin-bottom: 50px;
+}
+.download-app__link:first-of-type {
+  margin-right: 24px;
+}
+
+@media screen and (min-width: 1280px) {
+  .download-app .container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .download-app__iphones {
+    margin-bottom: 0;
+    margin-right: 112px;
+  }
+  .download-app__content {
+    align-items: flex-start;
+  }
+  .download-app__title {
+    text-align: start;
   }
 }
