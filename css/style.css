@@ -246,9 +246,9 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   position: fixed;
-  padding-top: 60px;
+  padding-top: 154px;
   max-width: 220px;
-  top: 96px;
+  top: 0;
   width: 100%;
   height: 100vh;
   right: -100%;
@@ -257,6 +257,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__navigation.active {
   right: 0;
+  z-index: 5;
+}
+.header__navigation.active + .site-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+.header .site-overlay {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(144, 208, 88, 0.3);
+  opacity: 0;
+  visibility: hidden;
 }
 .header__navigation-element {
   padding: 10px 40px;
@@ -269,6 +289,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #09a66d;
 }
 .header__buttons {
+  position: absolute;
+  right: 0;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -304,7 +327,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.2s;
 }
 .header__reg-btn.mobile {
-  right: 59px;
+  right: 75px;
+  z-index: 5;
 }
 .header__reg-btn:hover {
   opacity: 0.8;
@@ -385,6 +409,11 @@ h1, h2, h3, h4, h5, h6 {
   .header__navigation-element:not(:last-child) {
     margin-right: 40px;
   }
+  .header__buttons {
+    position: unset;
+    right: unset;
+    z-index: unset;
+  }
 }
 .hero {
   background-color: #f3fbf8;
@@ -404,7 +433,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 .hero__paralax-img {
-  opacity: 0.8;
+  opacity: 0.4;
 }
 .hero__title-wrapper {
   display: flex;
@@ -438,7 +467,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 16px;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 2px 0 5px 0.1px rgba(9, 166, 109, 0.3);
+  box-shadow: -15px 15px 25px rgba(0, 96, 60, 0.04);
   opacity: 0;
   transition: all 1.5s;
 }
@@ -534,6 +563,9 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 1280px) {
   .hero__photo-and-reviews {
     padding-right: 0;
+  }
+  .hero__paralax-img {
+    opacity: 0.8;
   }
 }
 .order-now {
@@ -816,6 +848,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .special-items__photo-wrapper {
   max-width: 600px;
@@ -891,7 +924,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 @media screen and (min-width: 1280px) {
@@ -916,6 +949,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .special-items .order-now {
     margin: 0;
+  }
+  .special-items__paralax-img {
+    opacity: 0.8;
   }
 }
 .reviews .container {
@@ -1118,6 +1154,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: stretch;
   }
   .download-app__iphones {
+    margin-left: 100px;
     margin-bottom: 0;
     margin-right: 112px;
   }
@@ -1126,6 +1163,95 @@ h1, h2, h3, h4, h5, h6 {
     align-items: flex-start;
   }
   .download-app__title {
+    text-align: start;
+  }
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 118px;
+}
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__column:not(:last-child) {
+  margin-bottom: 30px;
+}
+.footer__logo {
+  margin-bottom: 30px;
+}
+.footer__description {
+  text-align: center;
+  max-width: 345px;
+}
+.footer__subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  margin-bottom: 25px;
+}
+.footer__link-wrapper {
+  display: block;
+}
+.footer__link-wrapper:not(:last-child) {
+  margin-bottom: 15px;
+}
+.footer__link-wrapper:hover .footer__link-text {
+  color: #09a66d;
+}
+.footer__email {
+  margin-bottom: 15px;
+}
+.footer__link-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #555555;
+  transition: color 0.3s;
+}
+.footer__icons-wrapper:hover .footer__icons {
+  fill: #09a66d;
+}
+.footer__icons-wrapper:not(:last-child) {
+  margin-right: 50px;
+}
+.footer__icons {
+  fill: #222222;
+  transition: fill 0.3s;
+}
+
+@media screen and (min-width: 1280px) {
+  .footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 118px;
+  }
+  .footer__column {
+    display: block;
+  }
+  .footer__column:not(:last-child) {
+    margin-right: 142px;
+    margin-bottom: 0;
+  }
+  .footer__column:first-of-type {
+    margin-right: 157px;
+  }
+  .footer__description {
+    text-align: start;
+  }
+  .footer__link-wrapper:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  .footer__email {
+    margin-bottom: 25px;
+  }
+  .footer__link-text {
     text-align: start;
   }
 }
