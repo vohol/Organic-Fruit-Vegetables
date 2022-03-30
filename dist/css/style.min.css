@@ -174,22 +174,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
 }
 
-@media screen and (min-width: 848px) {
-  .svg-shopping-list-dims {
-    width: 80px;
-    height: 80px;
-  }
-
-  .svg-fast-time-dims {
-    width: 80px;
-    height: 80px;
-  }
-
-  .svg-delivery-man-dims {
-    width: 80px;
-    height: 80px;
-  }
-}
 * {
   box-sizing: border-box;
   color: #222222;
@@ -302,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3;
 }
 .header__icons-wrapper:hover {
-  box-shadow: 0 0 30px 2px #09a66d;
+  box-shadow: 0 0 20px 1px #09a66d;
 }
 .header__reg-btn {
   position: fixed;
@@ -560,7 +544,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   margin-bottom: 10px;
-  overflow: hidden;
 }
 .order-now:hover .order-now__arrow-wrapper {
   animation: move-arrow-wrapper 1.25s infinite;
@@ -833,7 +816,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden;
 }
 .special-items__photo-wrapper {
   max-width: 600px;
@@ -1112,6 +1094,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   background-color: #f3fbf8;
   margin-bottom: 16px;
+  transition: all 0.3s;
+}
+.download-app__subtitle:hover {
+  box-shadow: 0 0 20px 1px #09a66d;
 }
 .download-app__title {
   max-width: 663px;
@@ -1136,6 +1122,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 112px;
   }
   .download-app__content {
+    margin-top: 35px;
     align-items: flex-start;
   }
   .download-app__title {

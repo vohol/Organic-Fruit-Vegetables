@@ -119,7 +119,7 @@ $color-pale-black: #555555;
     background-color: $color-light-green;
     transition: all 0.3;
     &:hover {
-      box-shadow: 0 0 30px 2px $color-main-green;
+      box-shadow: 0 0 20px 1px $color-main-green;
     }
   }
   &__reg-btn {
@@ -408,7 +408,6 @@ $color-pale-black: #555555;
   position: relative;
   z-index: 2;
   margin-bottom: 10px;
-  overflow: hidden;
   &:hover &__arrow-wrapper {
     animation: move-arrow-wrapper 1.25s infinite;
   }
@@ -703,7 +702,6 @@ $color-pale-black: #555555;
     flex-direction: column;
     align-items: center;
     position: relative;
-    overflow: hidden;
   }
   &__photo-wrapper {
     max-width: 600px;
@@ -1008,6 +1006,10 @@ $color-pale-black: #555555;
     border-radius: 50px;
     background-color: $color-light-green;
     margin-bottom: 16px;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0 0 20px 1px $color-main-green;
+    }
   }
   &__title {
     max-width: 663px;
@@ -1036,6 +1038,7 @@ $color-pale-black: #555555;
       margin-right: 112px;
     }
     &__content {
+      margin-top: 35px;
       align-items: flex-start;
     }
     &__title {
