@@ -545,6 +545,7 @@ $color-pale-black: #555555;
       display: block;
       position: absolute;
       right: 0;
+      top: 0;
       animation: move-snake 5s linear infinite;
       transform-origin: 86.5px;
     }
